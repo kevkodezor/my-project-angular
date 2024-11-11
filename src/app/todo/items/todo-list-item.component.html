@@ -1,0 +1,7 @@
+<ul>
+    @for (item of todoList; track item.description) {
+        <li>
+            {{item.description}} -  {{item.complete}}
+        </li>
+    }
+</ul>
