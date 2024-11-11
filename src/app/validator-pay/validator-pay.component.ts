@@ -22,8 +22,8 @@ export class ValidatorPay {
     //     })
     // );
 
-    private service = inject(RegisterService);
-    private router = inject(Router);
+    private readonly service = inject(RegisterService);
+    private readonly router = inject(Router);
     public formBuild = inject(FormBuilder);
 
     public formRegister: FormGroup = this.formBuild.group({
