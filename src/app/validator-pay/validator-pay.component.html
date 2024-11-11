@@ -1,0 +1,42 @@
+<form [formGroup]="formRegister" class="p-5 bg-slate-300 rounded-md shadow-md grid grid-flow-row gap-3 mt-5 mb-b">
+    <label class="grid grid-flow-row">
+        <span>Fecha</span>
+        <input type="date" formControlName="date">
+    </label>
+    <label class="grid grid-flow-row gap-2">
+        <span>Banco</span>
+        <select formControlName="bank">
+            <option value="0000">Seleccione una opción</option>
+            <option value="0171">Banco Activo</option>
+            <option value="0134">Banesco</option>
+            <option value="0163">Banco El Tesoro</option>
+            <option value="0102">Banco de Venezuela</option>
+        </select>
+    </label>
+    <label class="grid grid-flow-row gap-2">
+        <span>Codigo</span>
+        <select formControlName="code">
+            <option value="0000">Seleccione una opción</option>
+            <option value="0412">0412</option>
+            <option value="0414">0414</option>
+            <option value="0424">0424</option>
+            <option value="0416">0416</option>
+            <option value="0426">0426</option>
+        </select>
+    </label>
+    <label class="grid grid-flow-row gap-2">
+        <span>Telefono</span>
+        <input type="number" formControlName="phone">
+    </label>
+    <label class="grid grid-flow-row gap-2">
+        <span>Monto</span>
+        <input type="number" formControlName="amount">
+    </label>
+    <button
+        (click)="validatePay()"
+        type="button"
+        class="bg-slate-400 rounded-md shadow-md py-2 font-semibold"
+        >
+        Validar Pago
+    </button>
+</form>
