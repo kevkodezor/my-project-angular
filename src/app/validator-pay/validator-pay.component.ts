@@ -47,11 +47,16 @@ export class ValidatorPay {
 
         this.service.validatorPayment(object).subscribe({
             next: (data) => {
-                // if (data.success)
+                if (data.success) {
+                    this.router.navigate([''])
+                } else {
+                    alert('Error de conexión')
+                }
                 console.log(data);
                 
             }, error: (error) => {
-                console.log(error.message);
+                console.log('Error');
+                console.log(error);
                 
             }
         });
